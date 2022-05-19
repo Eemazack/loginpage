@@ -1,0 +1,62 @@
+<header>
+    <h1 style="background-color: rgb(153, 204, 255);" >{{title}}</h1>
+
+
+
+</header>
+
+<br><br><br>
+
+<table>
+    <tr>
+        <td><h3 >Username:  </h3></td>
+        <td><input type="text" name="username" id="uname" placeholder="Enter Username" required></td>
+    </tr>
+    <tr><br></tr>
+   
+    <tr>
+        <td><h3 >Password:  </h3></td>
+        <td><input type="password"  name="password" id="pwd" placeholder="Enter Password" required></td>
+    </tr>
+    <tr><br></tr>
+
+    <td><input type="checkbox" onclick="myFunction()">Show Password </td>
+
+    <tr><br></tr>
+    
+
+    <tr>
+        <td></td>
+        <td>    
+            
+            <app-button 
+                color="brown" 
+                text="Login" 
+                (btnClick)="toggleAddTask()"
+            >
+    
+            </app-button>&nbsp;
+
+            <app-button 
+                color="brown" 
+                text="Sign Up" 
+                (btnClick)="toggleAddTask()"
+            >
+
+            </app-button>&nbsp;
+        
+        </td>
+    </tr>
+    </table>
+
+
+    <script>
+        function myFunction() {
+        var x = document.getElementById("pwd");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+        }
+    </script>
